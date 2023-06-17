@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container pt-4">
+    <h3>PDF File Uploaded Successfully!</h3>
+    <table class="table table-bordered">
+        <tbody>
+
+            <tbody>
+                {% for row in data %}
+                <tr>
+                    {% for item in row %}
+                    <td>{{ item }}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+
+        </tbody>
+    </table>
+    <a class="btn btn-primary btn-dark" href="{% url 'upload_pdf' %}" role="button">Upload page again</a>
+</div>
+
+{% endblock %}

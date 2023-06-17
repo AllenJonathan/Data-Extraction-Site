@@ -1,0 +1,18 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload PDF</title>
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    <!-- CSS CUSTOM -->
+    <link rel="stylesheet" href="{% static 'pdf2csv/style.css' %}">
+</head>
+<body>
+    {% block content %}
+        <!-- Content specific to child templates -->
+    {% endblock %}
+</body>
+</html>

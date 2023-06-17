@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container centered">
+    <h2 class="mt-4 mb-4">Upload PDF File</h2>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="form-group custom-file">
+            <label for="pdfFile" class="drop-container">
+              <span class="drop-title">Drop files here</span>
+              or
+              <input type="file" class="custom-file-input" id="pdfFile" name="file" required>
+            </label>
+        </div>
+        <div class="submit-container">
+            <button type="submit" class="btn btn-primary btn-secondary">Upload</button>
+        </div>
+
+    </form>
+</div>
+{% endblock %}
